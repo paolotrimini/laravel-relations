@@ -18,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/pilot/{id}', 'HomeController@pilot')
         -> name('pilot');
+
+    Route::get('/car/new', 'HomeController@createCar')
+        -> name('create-car');
+
+    Route::post('/car/store', 'HomeController@storeCar')
+        -> name('store-car');
