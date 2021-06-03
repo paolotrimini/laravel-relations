@@ -26,7 +26,9 @@ class HomeController extends Controller
 
     public function createCar(){
 
-        return view('pages.new-car');
+        $brands = Brand::all();
+
+        return view('pages.new-car', compact('brands'));
     }
 
     public function storecar(Request $request){
